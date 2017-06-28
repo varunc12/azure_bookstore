@@ -1,0 +1,50 @@
+<%= form_for :book, url: books_path do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :subtitle %>
+    <%= f.text_field :subtitle %>
+  </p>
+
+  <p>
+    <%= f.label :published %>
+    <%= f.date_field :date %>
+  </p>
+
+  <p>
+    <%= f.label :rating %>
+    <%= f.number_field :stars %>
+  </p>
+
+  <p>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </p>
+
+  <p>
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+  </p>
+
+  <p>
+    <%= f.label :publisher %>
+    <%= f.text_field :publisher %>
+  </p>
+
+  <p>
+    <%= f.label :pages %>
+    <%= f.number_field :pages %>
+  </p>
+
+  <p>
+    <%= f.label :amazon_link %>
+    <%= f.url_field :link %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+  <% end %>
