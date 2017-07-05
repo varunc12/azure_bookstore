@@ -1,4 +1,20 @@
 class HomeController < ApplicationController
+
   def index
   end
+
+  protected
+
+  def cell_head
+    "head_foot/cell_header"
+  end
+
+  def desktop_head
+    "head_foot/desktop_header"
+  end
+
+  def footer
+    "head_foot/footer"
+  end
+
 end

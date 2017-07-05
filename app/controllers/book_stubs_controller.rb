@@ -1,0 +1,2 @@
+class BookStubsController < ApplicationController
+end
