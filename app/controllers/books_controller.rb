@@ -19,7 +19,6 @@ class BooksController < ApplicationController
       @book = Book.new(book_params)
 
       if @book.save
-        BookStubsController.new(@book)
         redirect_to @book
       else
         render 'new'
@@ -45,11 +44,11 @@ class BooksController < ApplicationController
 
   private
     def book_params
-      params.require(:book).permit(:title, :author_name, :subtitle, :published, :publisher, :rating, :pages, :description, :image, :review, :amazon_link, :date_added)
+      params.require(:book).permit(:title, :author_name, :subtitle, :published, :publisher, :rating, :pages, :description, :cover, :review, :amazon_link, :date_added)
     end
 end
 
-# , :subtitle, :published, :publisher, :rating, :pages, :description, :image, :review, :amazon_link, :date_added
-# bin/rails generate model Book title:string subtitle:string published:date rating:float pages:int description:text publisher:string image:string review:text amazon_link:string date_added:timestamp
+# , :subtitle, :published, :publisher, :rating, :pages, :description, :cover, :review, :amazon_link, :date_added
+# bin/rails generate model Book title:string subtitle:string published:date rating:float pages:int description:text publisher:string cover:string review:text amazon_link:string date_added:timestamp
 # render plain: params[:article].inspect
 # <!-- <%= link_to 'Books', controller: 'books' %> -->
