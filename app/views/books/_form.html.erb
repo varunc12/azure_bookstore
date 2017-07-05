@@ -1,0 +1,72 @@
+
+<%= form_for(@book) do |f| %>
+
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@book.errors.count, "error") %>
+prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @book.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :subtitle %>
+    <%= f.text_field :subtitle %>
+  </p>
+
+  <p>
+    <%= f.label :author %>
+    <%= f.text_field :author_name %>
+  </p>
+
+  <p>
+    <%= f.label :published %>
+    <%= f.date_field :published %>
+  </p>
+
+  <p>
+    <%= f.label :stars %>
+    <%= f.number_field :rating %>
+  </p>
+
+  <p>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </p>
+
+  <p>
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+  </p>
+
+  <p>
+    <%= f.label :publisher %>
+    <%= f.text_field :publisher %>
+  </p>
+
+  <p>
+    <%= f.label :pages %>
+    <%= f.number_field :pages %>
+  </p>
+
+  <p>
+    <%= f.label :amazon_link %>
+    <%= f.url_field :amazon_link %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
