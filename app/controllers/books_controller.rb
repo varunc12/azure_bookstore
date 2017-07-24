@@ -1,4 +1,7 @@
 class BooksController < ApplicationController
+
+    http_basic_authenticate_with name: "azure", password: "books", except: [:index, :show]
+
     def index
       @books = Book.all
     end
@@ -52,3 +55,8 @@ end
 # bin/rails generate model Book title:string subtitle:string published:date rating:float pages:int description:text publisher:string cover:string review:text amazon_link:string date_added:timestamp
 # render plain: params[:article].inspect
 # <!-- <%= link_to 'Books', controller: 'books' %> -->
+# 
+# respond_to do |format|
+#   format.html { redirect_to root_url }
+#   format.json { render json: message }
+# end
