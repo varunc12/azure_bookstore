@@ -1,4 +1,4 @@
-
+<!--
 <h1>Without React</h1>
 <%= Book.all.each do |book| %>
   <%= image_tag "#{book.cover}" %>
@@ -6,6 +6,5 @@
 <% end %>
 
 <hr>
-<hr>
-<h1>With React</h1>
+<hr> -->
 <%= react_component('BookList', books:@books) %>

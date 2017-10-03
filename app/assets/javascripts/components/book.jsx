@@ -3,8 +3,7 @@ var Book = React.createClass({
     var book = this.props.book;
     return (
         <div>
-            <h3>{this.props.book.title}</h3>
-            <img src={this.props.book.cover}/>
+            <img src={this.props.book.cover} title={this.props.book.title}/>
             <p>{this.props.book.description}</p>
         </div>
     )
